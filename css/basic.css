@@ -261,7 +261,6 @@ main .darkhole2 {
 }
 @media (max-width: 1000px) {
   main .darkhole2 {
-    height: 70vw;
     position: absolute;
     top: 0;
     z-index: 80;
@@ -270,18 +269,28 @@ main .darkhole2 {
 }
 @media (max-width: 800px) {
   main .darkhole2 {
-    height: 100vw;
+    height: 60vw;
   }
 }
 main .profile_card {
   width: 25vw;
   height: 35vw;
-  background: #fff;
+  background: #c2d7ff;
   border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 5px solid #1447a0;
+  box-shadow: 3px 3px 5px 3px #333;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+main .profile_card:hover {
+  box-shadow: 0px 0px 10px 3px #b6ff7a;
 }
 main .profile_card.on {
   display: none;
@@ -295,8 +304,86 @@ main .profile_card.on {
 @media (max-width: 800px) {
   main .profile_card {
     width: 200px;
-    height: 250px;
+    height: 300px;
     transform: translate(-50%, -100%);
+  }
+}
+main .profile_card .Profile_img_wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .profile_card .Profile_img_wrap .Profile_img {
+  width: 50%;
+  padding-top: 50%;
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+  border: 6px solid #1447a0;
+}
+@media (max-width: 1000px) {
+  main .profile_card .Profile_img_wrap .Profile_img {
+    width: 60%;
+    padding-top: 60%;
+  }
+}
+@media (max-width: 800px) {
+  main .profile_card .Profile_img_wrap .Profile_img {
+    width: 80%;
+    padding-top: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 3px solid #1447a0;
+  }
+}
+main .profile_card .Profile_img_wrap .Profile_img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+main .profile_card .Profile_info_wrap {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .profile_card .Profile_info_wrap .Profile_name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+@media (max-width: 1400px) {
+  main .profile_card .Profile_info_wrap .Profile_name {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1200px) {
+  main .profile_card .Profile_info_wrap .Profile_name {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1000px) {
+  main .profile_card .Profile_info_wrap .Profile_name {
+    font-size: 22px;
+  }
+}
+@media (max-width: 800px) {
+  main .profile_card .Profile_info_wrap .Profile_name {
+    font-size: 20px;
+  }
+}
+main .profile_card .Profile_info_wrap .Profile_info {
+  text-align: center;
+  margin-top: 20px;
+}
+@media (max-width: 800px) {
+  main .profile_card .Profile_info_wrap .Profile_info .Completion {
+    display: none;
   }
 }
 main .leaf_page2,
@@ -313,9 +400,10 @@ main .Introduce {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40vw;
-  height: 30vw;
+  height: 21.2vw;
   background: #fff;
-  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
 }
 main .Introduce.stop {
   position: absolute;
@@ -326,14 +414,17 @@ main .Introduce.on {
 @media (max-width: 1000px) {
   main .Introduce {
     width: 50vw;
-    height: 40vw;
+    height: 26.5vw;
   }
 }
 @media (max-width: 800px) {
   main .Introduce {
     width: 70vw;
-    height: 60vw;
+    height: 37.1vw;
   }
+}
+main .Introduce img {
+  width: 100%;
 }
 main .darkhole {
   display: flex;
@@ -383,6 +474,10 @@ main .darkhole .skill_wrap ul li {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  transition: 0.3s;
+}
+main .darkhole .skill_wrap ul li:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 800px) {
   main .darkhole .skill_wrap ul li {
@@ -508,8 +603,12 @@ main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn.on {
   margin-top: 5vw;
 }
 main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn button {
+  cursor: pointer;
   background: transparent;
   border: none;
+}
+main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn button.on {
+  display: none;
 }
 @media (max-width: 1400px) {
   main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn button img {
@@ -520,6 +619,10 @@ main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn button {
   main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn button img {
     width: 40%;
   }
+}
+main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn ul {
+  cursor: default;
+  margin: auto;
 }
 main .darkhole .darkhole_wrap .siteIntro .show .screen_wrap .controlBtn ul li {
   display: none;
@@ -607,6 +710,11 @@ main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li h2 {
     margin-top: 10px;
   }
 }
+@media (max-width: 450px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li h2 {
+    display: none;
+  }
+}
 main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
   margin-top: 20px;
   padding: 20px;
@@ -615,6 +723,11 @@ main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
   main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
     margin-top: 10px;
     padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
+    display: none;
   }
 }
 main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .githubBtns {

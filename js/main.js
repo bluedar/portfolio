@@ -9,6 +9,15 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// 프로필 카드를 클릭하면 상세정보창으로 스크롤되는 이벤트
+profile_card.addEventListener("click", () => {
+  const scrollPage1 = document.querySelector("#scrollPage1");
+  const position =
+    scrollPage1.getBoundingClientRect().top - (window.innerWidth / 100) * 8;
+  const positionScroll = window.scrollY + position;
+  window.scrollTo({ top: positionScroll, behavior: "smooth" });
+});
+
 // 상세정보창 스크롤이벤트
 const Introduce = document.querySelector(".Introduce");
 window.addEventListener("scroll", function () {
@@ -25,6 +34,10 @@ window.addEventListener("scroll", function () {
   } else {
     Introduce.classList.remove("on");
   }
+});
+
+Introduce.addEventListener("click", () => {
+  document.querySelector(`#scrollPage2`).scrollIntoView({ behavior: "smooth" });
 });
 
 // 스킬창 스크롤 이벤트
@@ -62,7 +75,6 @@ const navBtn = (menuItems) => {
       const positionScroll = window.scrollY + position;
       //
       if (index === 1) {
-        console.log(positionScroll);
         window.scrollTo({ top: positionScroll, behavior: "smooth" });
       } else {
         document
@@ -107,10 +119,10 @@ screens.forEach((screen, index) => {
 });
 
 const controlBtnClick = (index) => {
-  line[index].classList.remove("on");
-  setTimeout(() => {
-    line[index].classList.add("on");
-  }, 600);
+  // line[index].classList.remove("on");
+  // setTimeout(() => {
+  //   line[index].classList.add("on");
+  // }, 600);
 };
 
 let siteIntroIndex;
@@ -126,7 +138,12 @@ siteIntros.forEach((siteIntro, setIndex) => {
   const nextBtn = siteIntro.querySelector(".nextBtn");
 
   const ULs = siteIntro.querySelectorAll("ul");
-  //const Lis = ULs[0].querySelectorAll("li");
+  const LiArr = ULs[0].querySelectorAll("li");
+  const LisLength = LiArr.length;
+  if (LisLength === 1) {
+    prevBtn.classList.add("on");
+    nextBtn.classList.add("on");
+  }
 
   //현재 온 되어있는 인덱스 값을 변수에 담아둔다.
 
