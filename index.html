@@ -270,30 +270,35 @@
                         <span class="logic">
                           TeProgames 최근접속게임 로직
 
-                          <br /><br />제이슨 파일에서 비동기로 데이터를 받아와
-                          해당 데이터를 대괄호표기법을 사용해 제이슨 객체속
-                          데이터들을 createEliment로 생성한 li에 innderHtml를
-                          활용하여 집어넣어 게임아이템Li들을 생성합니다.
-                          <br /><br />이 생성된 li에 addEventlistener로
-                          클릭이벤트를 생성하여 클릭시 최근방문한 게임 리스트에
-                          append 매소드를 사용하여 추가되도록 만듭니다.
-                          <br /><br />이때 최근방문기록칸에 아이템이 기존의
-                          5개에서 6개로 늘어나게 되므로 removeChild를 사용하여
-                          제일 마지막 아이템을
-                          <br /><br />game_items[game_items.length - 1] 형태로
-                          length를 이용해 마지막 인덱스를 잡아 잡아 제거해준다.
-                          <br /><br />위와같이 아이템이 추가될때 추가되는
-                          아이템내의 벨류들을 제이슨에서 가져올때의 역순으로
-                          변수에 넣고 객체에 집어 넣는다. 이 생성된 객체를
-                          로컬에 올려두고 페이지가 새로고침 될때 로컬에서 불러와
-                          최근방문기록에 li아이템으로 만들어 생성하여
-                          집어넣는다.
+                          <br /><br />
+                          제이슨 파일에서 비동기로 데이터를 받아와 해당 데이터를
+                          대괄호표기법을 사용해 제이슨 객체속 데이터들을
+                          createEliment로 생성한 li에 innderHtml를 활용하여
+                          집어넣어 게임아이템Li들을 생성합니다.
+                          <br /><br />
+                          이 생성된 li에 addEventlistener로 클릭이벤트를
+                          생성하여 클릭시 최근방문한 게임 리스트에 append
+                          매소드를 사용하여 추가되도록 만듭니다.
+                          <br /><br />
+                          이때 최근방문기록칸에 아이템이 기존의 5개에서 6개로
+                          늘어나게 되므로 removeChild를 사용하여 제일 마지막
+                          아이템을 game_items[game_items.length - 1] 형태로
+                          length를 이용해 마지막 인덱스를 잡아 잡아
+                          제거해줍니다.
+                          <br /><br />
+                          위와같이 아이템이 추가될때 추가되는 아이템내의
+                          벨류들을 제이슨에서 가져올때의 역순으로 변수에 넣고
+                          객체에 집어 넣습니다.
+                          <br /><br />
+                          이 생성된 객체를 로컬에 올려두고 페이지가 새로고침
+                          될때 로컬에서 불러와 최근방문기록에 li아이템으로
+                          만들어 생성하여 집어넣습니다.
                         </span>
                       </p>
                       <div class="githubBtns">
                         <button>
                           <a
-                            href="https://github.com/bluedar/teprogames/settings/pages"
+                            href="https://github.com/bluedar/teprogames"
                             target="_blank"
                             ><img src="./img/lang_icon/github.png" alt="github"
                           /></a>
@@ -573,17 +578,17 @@
                       <li class="on">
                         <img
                           class="pc_view"
-                          src="./img/site_img/clone_ipad.png"
+                          src="./img/site_img/sweet_garden.png"
                           alt=""
                         />
                         <img
                           class="tablet_view"
-                          src="./img/site_img/clone_ipad_pad.png"
+                          src="./img/site_img/sweet_garden_pad.png"
                           alt=""
                         />
                         <img
                           class="mobile_view"
-                          src="./img/site_img/clone_ipad_mobile.png"
+                          src="./img/site_img/sweet_garden_mobile.png"
                           alt=""
                         />
                       </li>
@@ -597,8 +602,8 @@
                     <ul>
                       <li class="on">
                         <p>
-                          애플 뮤직 <br class="br" />
-                          (반응형사이트)
+                          sweet_garden <br class="br" />
+                          (리액트)
                         </p>
                       </li>
                     </ul>
@@ -614,10 +619,10 @@
                   <ul class="line">
                     <li class="on">
                       <h2 class="info_title">
-                        &lt; apple music (클론사이트) /&gt;
+                        &lt; sweet_garden (리액트) / &gt;
                       </h2>
                       <p class="info_intro">
-                        아이패드 모델 비교하기 페이지 및 엔터테인먼트 페이지
+                        리액트를 사용하여 만든 음식주문사이트입니다.
                       </p>
                       <div class="githubBtns">
                         <button>
