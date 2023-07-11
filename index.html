@@ -58,16 +58,9 @@
             </div>
           </div>
           <div class="Profile_info_wrap">
-            <div class="Profile_name">Kim Seon Gwon</div>
+            <div class="Profile_name">김선권</div>
             <div class="Profile_info">
-              <span>1996.10.12</span>
-              <br />
-              <br />
-              <span class="Completion">
-                그린 컴퓨터 아카데미
-                <br />
-                프론트앤드 수료생
-              </span>
+              <span>Kim Seon Gwon</span>
             </div>
           </div>
         </div>
@@ -183,11 +176,57 @@
                   <!-- info ul -->
                   <ul class="line">
                     <li class="on">
-                      <h2 class="info_title">
-                        &lt; apple music (반응형사이트) /&gt;
+                      <h1 class="info_title">
+                        &lt; apple music (반응형사이트) / &gt;
+                      </h1>
+                      <h2 class="info_intro">
+                        애플뮤직 사이트에 일부 기능을 추가한 사이트
                       </h2>
-                      <p class="info_intro">
-                        아이패드 모델 비교하기 페이지 및 엔터테인먼트 페이지
+                      <p>
+                        <br /><br />
+                        메인페이지 : 애플뮤직 <br /><br />
+                        서브페이지 : IPad 모델 비교하기 페이지, 엔터테인먼트
+                        페이지 <br /><br />
+                        <span>
+                          <br /><br />
+                          Ipad 페이지 : 긴 화면을 쉽게 스크롤 할수 있도록
+                          스크롤링 기능 추가한
+                          <br />
+                          <br />
+                          엔터테인먼트 페이지 : 슬라이더 아이템 클릭시 폼 화면이
+                          나타나도록 추가 <br /><br />
+                        </span>
+                        <span class="logic">
+                          <br /><br />
+                          ipad 비교 로직 <br /><br />
+
+                          이전와 이후 벨류를 let preValue와 let nextValue로
+                          정의합니다. <br /><br />
+                          셀렉터가 클릭되면 해당 셀렉터에 들어있는 옵션들을
+                          querySelectorAll을 사용해 노드리스트로 가져옵니다.
+                          <br /><br />이렇게 가져온 옵션 노드리스트를 forEach로
+                          돌립니다. <br /><br />각각의 옵션에서 구조분해를
+                          사용하여 정의합니다. <br /><br />const { selected } =
+                          option; <br /><br />selected를 if문의 조건으로
+                          사용하여 참일경우 옵션의 벨류를 뽑아서 preValue에
+                          집어넣습니다. <br /><br />새로운 옵션을 클릭하여
+                          옵션의 selected가 바뀔때 선택한 대상을 가져옵니다.
+                          <br /><br />e.target <br /><br />가져온 대상 내의
+                          옵션들을 querySelectorAll로 가져옵니다.
+                          <br /><br />preValue값을 가져왔을때와 마찬가지의
+                          방법으로 value값을 가져와 nextValue 에 집어 넣습니다.
+                          <br /><br />모든 셀렉터중에서 preValue와 같은 옵션
+                          값이 있는것을 찾기위해 forEach로 각각의 셀렉터들을
+                          돌리고 selected=ture 인 옵션들의 밸류를 가져와
+                          nextValue 와 값이 같아 선택옵션이 중복상태에 놓일경우
+                          selected = false로 바꿔주고 preValue와 같은 벨류를
+                          가진 옵션을 찾아 selected =true를 넣어줍니다.
+                          <br />
+                          <br />
+                          이로서 다른 셀렉터에서 중복된 옵션을 선택하면 기존의
+                          옵션을 변경되는 셀렉터의 기존옵션으로 바꾸어주는
+                          로직이 완성됩니다.
+                        </span>
                       </p>
                       <div class="githubBtns">
                         <button>
@@ -209,11 +248,47 @@
                       </div>
                     </li>
                     <li>
-                      <h2 class="info_title">
-                        &lt; teprogames (반응형사이트) /&gt;
-                      </h2>
-                      <p class="info_intro">
+                      <h1 class="info_title">
+                        &lt; TeProGames (반응형사이트) / &gt;
+                      </h1>
+                      <h2 class="info_intro">
                         로컬을 활용한 최근접속기록 적용 사이트
+                      </h2>
+                      <p>
+                        <br /><br />
+                        메인페이지 : TeProGames <br /><br />
+                        서브페이지 : 게시판 페이지 <br /><br />
+                        <span>
+                          <br /><br />
+                          TeProGames : 각 게임을 클릭하면 로컬에 저장 되고 최근
+                          방문한 게임에 보이게 된다.
+                          <br />
+                          <br />
+                          게시판 : 글을 작성하면 메인페이지에서 제목을 볼 수
+                          있다. <br /><br />
+                        </span>
+                        <span class="logic">
+                          TeProgames 최근접속게임 로직
+
+                          <br /><br />제이슨 파일에서 비동기로 데이터를 받아와
+                          해당 데이터를 대괄호표기법을 사용해 제이슨 객체속
+                          데이터들을 createEliment로 생성한 li에 innderHtml를
+                          활용하여 집어넣어 게임아이템Li들을 생성합니다.
+                          <br /><br />이 생성된 li에 addEventlistener로
+                          클릭이벤트를 생성하여 클릭시 최근방문한 게임 리스트에
+                          append 매소드를 사용하여 추가되도록 만듭니다.
+                          <br /><br />이때 최근방문기록칸에 아이템이 기존의
+                          5개에서 6개로 늘어나게 되므로 removeChild를 사용하여
+                          제일 마지막 아이템을
+                          <br /><br />game_items[game_items.length - 1] 형태로
+                          length를 이용해 마지막 인덱스를 잡아 잡아 제거해준다.
+                          <br /><br />위와같이 아이템이 추가될때 추가되는
+                          아이템내의 벨류들을 제이슨에서 가져올때의 역순으로
+                          변수에 넣고 객체에 집어 넣는다. 이 생성된 객체를
+                          로컬에 올려두고 페이지가 새로고침 될때 로컬에서 불러와
+                          최근방문기록에 li아이템으로 만들어 생성하여
+                          집어넣는다.
+                        </span>
                       </p>
                       <div class="githubBtns">
                         <button>
@@ -294,16 +369,16 @@
                 <div class="info_wrap">
                   <ul class="line">
                     <li class="on">
-                      <h2 class="info_title">
-                        &lt; secretKey (부트스트랩) /&gt;
-                      </h2>
-                      <p class="info_intro">
+                      <h1 class="info_title">
+                        &lt; secretKey (부트스트랩) / &gt;
+                      </h1>
+                      <h2 class="info_intro">
                         부트스트랩을 사용하여 제작한 사이트
-                      </p>
+                      </h2>
                       <div class="githubBtns">
                         <button>
                           <a
-                            href="https://github.com/bluedar/bootstrappage/settings/pages"
+                            href="https://github.com/bluedar/bootstrappage"
                             target="_blank"
                             ><img src="./img/lang_icon/github.png" alt="github"
                           /></a>
@@ -405,8 +480,33 @@
                   <!-- info ul -->
                   <ul class="line">
                     <li class="on">
-                      <h2 class="info_title">&lt; TeProDday (웹앱) /&gt;</h2>
-                      <p class="info_intro">dday 일정에 맞춰...</p>
+                      <h1 class="info_title">&lt; TeProDday (웹앱) / &gt;</h1>
+                      <h2 class="info_intro">
+                        D-day를 정하고 매일 할일을 작성하는 웹앱
+                      </h2>
+                      <p style="margin-top: -40px">
+                        <br /><br />
+                        <span class="logic">
+                          <br /><br />
+                          캘린더 로직 Date.now를 활용하여 받아온 값으로 let에
+                          year month day를 객체로 받아옵니다.
+                          <br /><br />
+                          받아온 값에서 버튼을클릭하면 day가 1씩 오르도록
+                          합니다. 달별 최대일수를 계산하는 함수를 만들어 버튼
+                          클릭시에 달별 최대 일수가 자동으로 계산되어 변수에
+                          들어가도록 만듭니다.
+                          <br /><br />
+                          day가 최대일수를 넘기면 month를 1 더하고 day를 1로
+                          바뀌게 만듭니다. <br />
+                          day가 1보다 낮아지면 month를 1 낮추고 day를 최대일수로
+                          바뀌게 만듭니다.
+                          <br /><br />
+                          이렇게 바뀐 day를 화면에 뿌려주고 로컬에 업로드 합니다
+
+                          <br />
+                          <br />
+                        </span>
+                      </p>
                       <div class="githubBtns">
                         <button>
                           <a
@@ -427,12 +527,14 @@
                       </div>
                     </li>
                     <li>
-                      <h2 class="info_title">&lt; TeProTalk (웹앱) /&gt;</h2>
-                      <p class="info_intro">채팅어플...</p>
+                      <h1 class="info_title">&lt; TeProTalk (웹앱) / &gt;</h1>
+                      <h2 class="info_intro">
+                        채팅을 입력해볼수 있는 채팅어플
+                      </h2>
                       <div class="githubBtns">
                         <button>
                           <a
-                            href="https://github.com/bluedar/pwa/settings/pages"
+                            href="https://github.com/bluedar/pwa"
                             target="_blank"
                             ><img src="./img/lang_icon/github.png" alt="github"
                           /></a>
@@ -519,12 +621,17 @@
                       </p>
                       <div class="githubBtns">
                         <button>
-                          <a href="#"
+                          <a
+                            target="_blank"
+                            href="https://github.com/bluedar/react_meal_sweets"
                             ><img src="./img/lang_icon/github.png" alt="github"
                           /></a>
                         </button>
                         <button>
-                          <a href="#"
+                          <a
+                            target="_blank
+                          "
+                            href="https://vermillion-sherbet-1c1d06.netlify.app/"
                             ><img
                               src="./img/lang_icon/portfolio.png"
                               alt="portfolio site"

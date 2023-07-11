@@ -1,13 +1,1 @@
 //폰트 모음
-// 오뮤 다 이쁨체
-@mixin cute-font($font-size: 16px, $font-weight: nomal) {
-  font-family: "omyu_pretty", sans-serif;
-  font-size: $font-size;
-  font-weight: $font-weight;
-}
-
-@mixin sweet-font($font-size: 16px, $font-weight: nomal) {
-  font-family: "SUITE-Regular", sans-serif;
-  font-size: $font-size;
-  font-weight: $font-weight;
-}

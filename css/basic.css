@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "TheJamsil5Bold", Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .screen_img_wrap .pc_view {
@@ -681,6 +681,7 @@ main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li {
   color: #42ff00;
   padding: 20px;
   overflow: hidden;
+  font-family: "D2Coding", "sans-serif";
 }
 main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li.on {
   display: block;
@@ -690,43 +691,83 @@ main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li.on {
     padding: 10px;
   }
 }
-main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li h2 {
+main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_title {
   text-align: center;
   font-size: 24px;
   margin-top: 20px;
 }
 @media (max-width: 1200px) {
-  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li h2 {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_title {
     font-size: 20px;
   }
 }
 @media (max-width: 1000px) {
-  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li h2 {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_title {
     font-size: 18px;
   }
 }
 @media (max-width: 800px) {
-  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li h2 {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_title {
     margin-top: 10px;
   }
 }
 @media (max-width: 450px) {
-  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li h2 {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_title {
     display: none;
   }
 }
-main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
+main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_intro {
   margin-top: 20px;
   padding: 20px;
 }
 @media (max-width: 800px) {
-  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_intro {
     margin-top: 10px;
     padding: 10px;
   }
 }
 @media (max-width: 600px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li .info_intro {
+    display: none;
+  }
+}
+main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
+  height: 18vw;
+  overflow-y: auto;
+  font-family: "D2Coding", "sans-serif";
+  line-height: 24px;
+}
+main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+@media (max-width: 1200px) {
   main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p {
+    display: none;
+  }
+}
+@media (max-width: 1600px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p span {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p span.logic {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  main .darkhole .darkhole_wrap .siteIntro .info .info_wrap .line li p span.logic {
     display: none;
   }
 }
