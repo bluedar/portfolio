@@ -493,21 +493,22 @@
                         <br /><br />
                         <span class="logic">
                           <br /><br />
-                          캘린더 로직 Date.now를 활용하여 받아온 값으로 let에
-                          year month day를 객체로 받아옵니다.
+                          캘린더 로직
+                          <br /><br />
+                          Date.now를 활용하여 받아온 값으로 let에 year month
+                          day를 객체로 받아옵니다.
                           <br /><br />
                           받아온 값에서 버튼을클릭하면 day가 1씩 오르도록
                           합니다. 달별 최대일수를 계산하는 함수를 만들어 버튼
                           클릭시에 달별 최대 일수가 자동으로 계산되어 변수에
                           들어가도록 만듭니다.
                           <br /><br />
-                          day가 최대일수를 넘기면 month를 1 더하고 day를 1로
-                          바뀌게 만듭니다. <br />
-                          day가 1보다 낮아지면 month를 1 낮추고 day를 최대일수로
-                          바뀌게 만듭니다.
+                          day가 최대일수를 넘기면 day를 1로 바뀌게 만듭니다.
+                          <br />
+                          day가 1보다 낮아지면 day를 최대일수로 바뀌게 만듭니다.
                           <br /><br />
-                          이렇게 바뀐 day를 화면에 뿌려주고 로컬에 업로드 합니다
-
+                          이렇게 바뀐 day를 month year와 함께 화면에 뿌려주고
+                          로컬에 업로드 합니다.
                           <br />
                           <br />
                         </span>
@@ -534,8 +535,25 @@
                     <li>
                       <h1 class="info_title">&lt; TeProTalk (웹앱) / &gt;</h1>
                       <h2 class="info_intro">
-                        채팅을 입력해볼수 있는 채팅어플
+                        채팅을 입력해볼수 있는 채팅어플<br /><br />
                       </h2>
+                      <br /><br />
+                      <p>
+                        <span class="logic">
+                          sass를 사용하여 제작한 PWA 웹앱 사이트 입니다.
+                          <br /><br />
+                          createElement를 사용하여 div 엘리먼트를 만들고 해당
+                          div엘리먼트에 classList.add를 사용해 클래스를 넣어주고
+                          innerHTML매소드를 사용해 내부에 코드를 넣어주되
+                          채팅벨류가 들어가야할 부분에 템플릿 리터럴을 사용하여
+                          벨류값을 변수로 받아와 들어오도록 만듭니다.
+                          <br /><br />
+                          전송버튼을 누르게 되면 입력한 벨류값이 템플릿리터럴로
+                          들어오게 되어 엘리먼트의 텍스트로 들어오게 되면서
+                          채팅창에 append메소드로 인해 추가되며 화면상에
+                          채팅내역으로 나타나게 됩니다.
+                        </span>
+                      </p>
                       <div class="githubBtns">
                         <button>
                           <a
