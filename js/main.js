@@ -1,6 +1,41 @@
+const onBtns = document.querySelectorAll("header button");
+const onBtns2 = document.querySelectorAll("aside button");
+
+window.addEventListener("scroll", () => {
+  onBtns.forEach((btnNavBtns, index) => {
+    const windowWidhth = (window.innerWidth / 100) * 56 * 2;
+
+    const widowHight = window.innerHeight / 2 + this.window.scrollY;
+    if (
+      widowHight >= windowWidhth * (index + 0) &&
+      widowHight <= windowWidhth * (index + 1)
+    ) {
+      btnNavBtns.classList.add("on");
+    } else {
+      btnNavBtns.classList.remove("on");
+    }
+  });
+});
+
+window.addEventListener("scroll", () => {
+  onBtns2.forEach((btnNavBtns, index) => {
+    const windowWidhth = (window.innerWidth / 100) * 56 * 2;
+
+    const widowHight = window.innerHeight / 2 + this.window.scrollY;
+    if (
+      widowHight >= windowWidhth * (index + 0) &&
+      widowHight <= windowWidhth * (index + 1)
+    ) {
+      btnNavBtns.classList.add("on");
+    } else {
+      btnNavBtns.classList.remove("on");
+    }
+  });
+});
+
 //프로필 카드 스크롤 이벤트
 const profile_card = document.querySelector(".profile_card");
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   const windowWidhth = (window.innerWidth / 100) * 56 * 2.5;
   if (window.innerHeight / 2 + this.window.scrollY > windowWidhth) {
     profile_card.classList.add("on");
@@ -20,7 +55,7 @@ profile_card.addEventListener("click", () => {
 
 // 상세정보창 스크롤이벤트
 const Introduce = document.querySelector(".Introduce");
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   const windowWidhth = (window.innerWidth / 100) * (56 * 3.5 - 8);
   const windowWidhth2 = (window.innerWidth / 100) * 56 * 2.5;
   if (window.innerHeight / 2 + this.window.scrollY > windowWidhth) {
@@ -42,7 +77,7 @@ Introduce.addEventListener("click", () => {
 
 // 스킬창 스크롤 이벤트
 const skill_wrap = document.querySelector(".skill_wrap");
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   const windowWidhth = (window.innerWidth / 100) * (56 * 5);
   const windowWidhth2 = (window.innerWidth / 100) * (56 * 4.5);
   if (window.innerHeight / 2 + this.window.scrollY > windowWidhth) {
@@ -62,13 +97,13 @@ const headerMenuItems = document.querySelectorAll(
 );
 
 const navBtn = (menuItems) => {
-  menuItems.forEach(function (menuItem, index) {
-    menuItem.onclick = function (e) {
+  menuItems.forEach((menuItem, index) => {
+    menuItem.onclick = (e) => {
       e.preventDefault();
       menuItems.forEach((menuItem) => {
-        menuItem.classList.remove("on");
+        //menuItem.classList.remove("on");
       });
-      menuItem.classList.add("on");
+      //menuItem.classList.add("on");
       const scrollPage1 = document.querySelector("#scrollPage1");
       const position =
         scrollPage1.getBoundingClientRect().top - (window.innerWidth / 100) * 8;
@@ -94,7 +129,7 @@ const controlBtns = document.querySelectorAll(".controlBtn");
 const info_wrap = document.querySelectorAll(".info_wrap");
 const line = document.querySelectorAll(".line");
 screens.forEach((screen, index) => {
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", () => {
     const windowWidhth = (window.innerWidth / 100) * 56 * (7 + 2 * index);
     const windowWidhth2 = (window.innerWidth / 100) * 56 * (6.5 + 2 * index);
     if (window.innerHeight / 2 + this.window.scrollY > windowWidhth) {
@@ -117,13 +152,6 @@ screens.forEach((screen, index) => {
     }
   });
 });
-
-const controlBtnClick = (index) => {
-  // line[index].classList.remove("on");
-  // setTimeout(() => {
-  //   line[index].classList.add("on");
-  // }, 600);
-};
 
 let siteIntroIndex;
 let siteIntroMaxIndex;
